@@ -16,7 +16,7 @@ namespace EmpWageArrayInheritance
             Console.WriteLine("Monthly wage");
             EmpWageArray empWageBuilder = new EmpWageArray();
             
-            empWageBuilder.AddCompany("TCS", 20, 8, 4, 80, 20);
+            empWageBuilder.AddCompany("TATA", 20, 8, 4, 80, 20);
             empWageBuilder.AddCompany("HUNDAI", 20, 8, 4, 90, 20);
         }
     }

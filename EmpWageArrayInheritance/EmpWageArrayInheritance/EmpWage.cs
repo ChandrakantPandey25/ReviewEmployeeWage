@@ -31,26 +31,22 @@ namespace EmpWageArrayInheritance
             companies = new EmpWage[2];
             compCount = 0;
         }
-        //public void MonthlyWages(int Monthly_Wage)
-        //{
-        //    this.wagesPerMonth = Monthly_Wage;
-        //    Console.WriteLine($"Wages for the company {Company_name} for the month : {wagesPerMonth}");
-        //}
+     
 
 
     }
 
     public class EmpWageArray : EmpWage
         {
-        private string Company_Name;
 
-        public EmpWageArray() : base("TATA",50, 8, 4, 20, 160)
+        string Company_Name;
+        public EmpWageArray() : base("Company_Name",50, 8, 4, 20, 160)
         {
 
         }
           public int Calculations()
     {
-            EmpWage company = new EmpWage(Company_Name, Wage_Per_Hr, Full_Hr_Per_Day, Part_Hr_Per_Day, Max_Working_Days, Max_Working_Hrs);
+            EmpWage company = new EmpWage(Company_Name,Wage_Per_Hr, Full_Hr_Per_Day, Part_Hr_Per_Day, Max_Working_Days, Max_Working_Hrs);
         int Hr_Per_Day = 0;
         int Wage_Per_Day = 0;
         int Total_Working_Hrs = 0;
@@ -83,7 +79,6 @@ namespace EmpWageArrayInheritance
         }
         return Monthly_Wage;
 
-        Console.WriteLine("Wages in a Month:" + Monthly_Wage + "\n");
     }
 
         public void MonthlyWages(int Monthly_Wage)
@@ -94,7 +89,7 @@ namespace EmpWageArrayInheritance
         public void AddCompany(string Company_Name, int Wage_Per_Hr, int Full_Hr_Per_Day, int Part_Hr_Per_Day, int Max_Working_Days, int Max_Working_Hrs)
 
         {
-            EmpWageArray company = new EmpWageArray(/*Company_Name,Wage_Per_Hr, Full_Hr_Per_Day, Part_Hr_Per_Day, Max_Working_Days, Max_Working_Hrs*/);
+            EmpWageArray company = new EmpWageArray();
             company.MonthlyWages(this.Calculations());
             companies[compCount] = company;
             compCount++;
