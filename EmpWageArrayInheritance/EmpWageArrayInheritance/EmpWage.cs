@@ -51,19 +51,21 @@ namespace EmpWageArrayInheritance
 
 
 
-            while (Total_Working_Hrs < company.Max_Working_Hrs && Present_Days < company.Max_Working_Days)
+            while (Total_Working_Hrs < Max_Working_Hrs && Present_Days < Max_Working_Days)
             {
 
                 switch (new Random().Next(0, 3))
                 {
-                    case Full_Time:
-                        Hr_Per_Day = company.Full_Hr_Per_Day;
+                    case Full_Time:                        
+                        Hr_Per_Day = Full_Hr_Per_Day;
                         Present_Days++;
                         break;
-                    case Part_Time:
-                        Hr_Per_Day = company.Part_Hr_Per_Day;
+
+                    case Part_Time:                        
+                        Hr_Per_Day = Part_Hr_Per_Day;
                         Present_Days++;
                         break;
+
                     default:
                         Hr_Per_Day = 0;
                         break;
@@ -81,9 +83,9 @@ namespace EmpWageArrayInheritance
 
         {
             this.Company_Name = Company_Name;
-            
-            EmpWageArray company = new EmpWageArray();            
-            companies[compCount] = this.Calculations();
+            EmpWageArray result = new EmpWageArray();
+            int wage = result.Calculations();
+            companies[compCount] = wage;
             Console.WriteLine($"Monthly Employee Wage in {Company_Name} is { companies[compCount]}");
             compCount++;
 
