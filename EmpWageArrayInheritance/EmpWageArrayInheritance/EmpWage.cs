@@ -12,11 +12,11 @@ namespace EmpWageArrayInheritance
         public const int Part_Time = 2;
         public string Company_Name;
         public int Wage_Per_Hr;
-        public int Full_Hr_Per_Day = 8;
-        public int Part_Hr_Per_Day = 4;
+        public int Full_Hr_Per_Day;
+        public int Part_Hr_Per_Day;
         public int Max_Working_Days;
         public int Max_Working_Hrs;
-        public int wagesPerMonth = 0;
+        //public int wagesPerMonth = 0;
         public int[] companies;
         public int compCount;
 
